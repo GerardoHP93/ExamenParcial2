@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package files;
 
 import java.io.File;
@@ -19,9 +16,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class EditorFiles extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Editor
-     */
     public EditorFiles() {
         initComponents();
     }
@@ -164,10 +158,8 @@ public class EditorFiles extends javax.swing.JFrame {
     private void btnArchivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnArchivoMouseClicked
         System.out.println("Inico de la carga de archivo");
         JFileChooser fc = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos de texto",cmboxTipoArchivo.getSelectedItem().toString());
-        
-        System.out.println(cmboxTipoArchivo.getSelectedItem().toString());
-        
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos de texto o json",cmboxTipoArchivo.getSelectedItem().toString());
+               
         fc. setFileFilter(filter);
         int seleccion = fc. showOpenDialog(this);
         if(seleccion == JFileChooser.CANCEL_OPTION){
